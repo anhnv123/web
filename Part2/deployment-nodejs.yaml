@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: deployment-node-app
   labels:
-    something: node-app-tunglt
+    something: node-app-anhnv
 spec:
   strategy:
      type: RollingUpdate
@@ -14,17 +14,17 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node-app-tunglt
+      app: node-app-anhnv
 
   template:
     metadata:
       name: node-app-mongo-pod
       labels:
-        app: node-app-tunglt
+        app: node-app-anhnv
     spec:
       containers:
         - name: node-app-nodea
-          image: tunglt2/node-app
+          image: anhnv/node-app
           env:
            - name: MONGODB_URI
              value: "mongodb://mongodb-svc:27017/demo"
