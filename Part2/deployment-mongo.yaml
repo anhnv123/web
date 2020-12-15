@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: deployment-mongo
   labels:
-    something: mongo-tunglt
+    something: mongo-anhnv
 spec:
   strategy:
      type: RollingUpdate
@@ -14,13 +14,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo-tunglt
+      app: mongo-anhnv
 
   template:
     metadata:
       name: demo-mongo-pod
       labels:
-        app: mongo-tunglt
+        app: mongo-anhnv
     spec:
       containers:
         - name: mongo-nodea
